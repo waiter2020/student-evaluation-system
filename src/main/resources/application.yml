@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/yiban
+    username: root
+    password: 690818
+    test-while-idle: true
+    validation-query: SELECT 1
+  thymeleaf:
+    mode: LEGACYHTML5
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  http:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 10MB
+server:
+  port: 8080
+  tomcat:
+    max-http-post-size: 6553600
+  max-http-header-size: 6553600
+
+auth:
+  appid:  ee64deaeb6489c75
+  appkey: 0e99e7382342bb32ef06dddfebce4c3a
